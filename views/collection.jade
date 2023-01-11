@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h1 All Category Here.
+
+    a(href='/category/new') Add a new Category
+    each val in data
+        h3 #{val.name} - #{val.description}
+        a(href=`${"category/detail/" + val.name}`) #{val.name}

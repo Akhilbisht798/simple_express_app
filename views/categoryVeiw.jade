@@ -1,0 +1,12 @@
+extends layout 
+
+block content
+    h1 Available items in #{name}.
+
+    a(href=`${"/category/" + name + "/Add"}`) Add a new Item.
+
+    each val in data
+        h2 #{val.name}
+        h4 #{val.description}
+        h4 Price: $ #{val.price}
+        h4 In-Stock: #{val.inStock}
